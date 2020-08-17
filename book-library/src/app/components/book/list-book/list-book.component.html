@@ -1,0 +1,26 @@
+<div class="col-md-6 user-container">
+    <h2 style="margin: auto"> User Details</h2>
+    <button class="btn btn-danger" style="width:100px" (click)="addBook()"> Add User</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Title</th>
+        <th>Authors</th>
+        <th>Publish Year</th>
+        <th>Genres</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let book of books">
+        <td class="hidden"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button class="btn btn-success" (click)="deleteBook(book)"> Delete</button>
+          <button class="btn btn-success" (click)="editBook(book)" style="margin-left: 20px;"> Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
