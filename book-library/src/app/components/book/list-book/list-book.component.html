@@ -1,28 +1,24 @@
+<h2 class="text-center"> Book Details</h2>
 
-    <h2 class="text-center"> Book Details</h2>
+<div class="row justify-content-between m-1">
+  <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
 
-    <div class="row justify-content-between m-1">
-      <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
-
-      <button class="align-right btn btn-danger col-auto" (click)="addBook()"> Add Book</button>
-    </div>
+  <button class="align-right btn btn-danger col-auto" (click)="addBook()"> Add Book</button>
+</div>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
-    <!-- ID Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
       <td mat-cell *matCellDef="let book"> {{book.id}} </td>
     </ng-container>
 
-    <!-- Progress Column -->
     <ng-container matColumnDef="title">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
       <td mat-cell *matCellDef="let book"> {{book.title}} </td>
     </ng-container>
 
-    <!-- Name Column -->
     <ng-container matColumnDef="authors">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Authors </th>
       <td mat-cell *matCellDef="let book"> {{book.authors}} </td>
@@ -50,54 +46,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let book; columns: displayedColumns;"></tr>
 
-    <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
     </tr>
   </table>
 
 </div>
-
-
-
-
-
-
-<!-- <div class="col-12 user-container">
-    <h2 class="text-center"> Book Details</h2>
-    <div class="row justify-content-between m-1">
-      <input type="text"
-      class="form-control col-3"
-      name="searchString"
-      placeholder="Type to search...">
-      <button class="align-right btn btn-danger col-auto" (click)="addBook()"> Add Book</button>
-    </div>
-   
-    
-    <table class="table table-striped">
-      <thead>
-      <tr>
-        <th class="d-none">Id</th>
-        <th class="text-center">Title</th>
-        <th class="text-center">Authors</th>
-        <th class="text-center">Publish Year</th>
-        <th class="text-center">Genres</th>
-        <th class="text-center">Actions</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let book of books">
-        <td class="d-none">{{book.id}}</td>
-        <td>{{book.title}}</td>
-        <td>{{book.authors}}</td>
-        <td>{{book.publishYear}}</td>
-        <td>{{book.genres}}</td>
-        <td>
-          <button class="btn btn-success m-2" (click)="deleteBook(book)"> Delete</button>
-          <button class="btn btn-success m-2" (click)="editBook(book)"> Edit</button>
-          <button class="btn btn-success m-2" (click)="detailsBook(book)"> Details</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div> -->
