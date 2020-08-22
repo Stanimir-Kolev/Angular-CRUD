@@ -1,0 +1,42 @@
+{
+    "status": 200,
+    "message": "Book list fetched successfully.",
+    "result": [
+        {
+            "id": 15343,
+            "title": "Foundation",
+            "authors": [
+                "Isaac Asimov"
+            ],
+            "genres": [
+                "Science fiction",
+                "Political drama"
+            ],
+            "publishYear": 1951
+        },
+        {
+            "id": 1343,
+            "title": "Foundation1",
+            "authors": [
+                "Isaac Asimov1"
+            ],
+            "genres": [
+                "Science fiction1",
+                "Political drama1"
+            ],
+            "publishYear": 1952
+        },
+        {
+            "id": 13243,
+            "title": "Foundation2",
+            "authors": [
+                "Isaac Asimov2"
+            ],
+            "genres": [
+                "Science fiction2",
+                "Political drama2"
+            ],
+            "publishYear": 1953
+        }
+    ]
+}

@@ -8,7 +8,7 @@ import { Book } from '../models/book.model';
 export class ServerCommunicationService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'http://localhost:8080/books/';
+  baseUrl = 'http://localhost:4200/assets/api.json';
 
   getBooks(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseUrl);
@@ -30,3 +30,4 @@ export class ServerCommunicationService {
     return this.http.delete<ApiResponse>(this.baseUrl + id);
   }
 }
+

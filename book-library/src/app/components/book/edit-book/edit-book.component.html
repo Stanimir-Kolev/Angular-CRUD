@@ -1,1 +1,34 @@
-<p>edit-book works!</p>
+<div class="row">
+    <div class="col-12 book-container">
+        <h2 class="text-center">Edit Book</h2>
+        <button class="btn btn-success" (click)="goToListBook()">Back to list</button>
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+            <div class="d-none">
+                <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+            </div>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" formControlName="title" placeholder="Title" name="title" class="form-control"
+                    id="title">
+            </div>
+
+            <div class="form-group">
+                <label for="author">Authors:</label>
+                <input type="text" formControlName="author" placeholder="Authors" name="author" class="form-control"
+                    id="author">
+            </div>
+
+            <div class="form-group">
+                <label for="genres">Genres:</label>
+                <input formControlName="genres" placeholder="First Name" name="genres" class="form-control" id="genres">
+            </div>
+
+            <div class="form-group">
+                <label for="publishYear">Publish Year:</label>
+                <input type="number" formControlName="publishYear" placeholder="Publish Year" name="publishYear"
+                    class="form-control" id="publishYear">
+            </div>
+            <button class="btn btn-success">Update</button>
+        </form>
+    </div>
+</div>
